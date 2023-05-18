@@ -44,7 +44,7 @@ class FruitList extends StatefulWidget {
 
 class _FruitList extends State<FruitList> {
   int _counter = 0;
-  List<int> _fruitList = <int>[];
+  final List<int> _fruitList = <int>[];
 
   void incrementCounter() {
     setState(
@@ -70,7 +70,7 @@ class _FruitList extends State<FruitList> {
             child: Row(
               children: [
                 Text(
-                  '$_fruitList[index]',
+                  '${_fruitList[index]}',
                   style: const TextStyle(color: Colors.white),
                 ),
                 WhichImage(_fruitList[index]),
